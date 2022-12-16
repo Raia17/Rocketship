@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; font: inherit }
+img, picture, svg, video { display: block; max-width: 100%; }
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    height: 2px;
+
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+
+    scale: 0;
+    transition: 150ms;
+}
+
+.nav-link:hover::after {
+    scale: 1;
+}
